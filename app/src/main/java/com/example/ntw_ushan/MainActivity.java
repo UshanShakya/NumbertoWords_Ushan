@@ -2,6 +2,7 @@ package com.example.ntw_ushan;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -28,6 +29,10 @@ public class MainActivity extends AppCompatActivity {
 
 
                 int num;
+                if(TextUtils.isEmpty(etNumber.getText().toString())){
+                    etNumber.setText("Please enter a number.");
+                    return;
+                }
                 num= Integer.parseInt(etNumber.getText().toString());
 
                 NumbertoWords numbertoWords= new NumbertoWords(num);
