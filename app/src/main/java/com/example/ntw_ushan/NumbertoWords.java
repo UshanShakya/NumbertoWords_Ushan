@@ -31,7 +31,7 @@ public class NumbertoWords {
             second=num/10;
             third=num%10;
 
-            hundreds= numnames[first]+" Hundred and ";
+            hundreds= numnames[first]+" Hundred ";
             tens= tensname[second];
             ones= numnames[third];
             word=(hundreds+tens+ones);
